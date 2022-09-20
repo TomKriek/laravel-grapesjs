@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit {{ $model->editor_page_title }}</title>
 
-    @foreach ($editorConfig->getStyles() as $style)
+    @foreach ( $editorConfig->getStyles() as $style )
         <link rel="stylesheet" href="{{ $style }}">
     @endforeach
 
@@ -77,8 +77,8 @@
 
 <body>
     <div id="{{ str_replace('#', '', $editorConfig->container ?? 'editor') }}"></div>
-    
-    @foreach ($editorConfig->getScripts() as $script)
+
+    @foreach ( $editorConfig->getScripts() as $script)
         <script src="{{ $script }}"></script>
     @endforeach
 </body>
